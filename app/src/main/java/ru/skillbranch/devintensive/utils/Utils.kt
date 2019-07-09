@@ -32,7 +32,7 @@ object Utils {
                 alphabet[i]?.let { transFirstName += it }
             } else if (!alphabet[i.toLowerCase()].isNullOrBlank()){
                 alphabet[i.toLowerCase()]?.let { transFirstName += it.capitalize() }
-            }else if (alphabet[i.toLowerCase()].isNullOrBlank()){
+            }else if (alphabet[i.toLowerCase()] == null){
                 transFirstName += i
             }
         }
@@ -41,7 +41,7 @@ object Utils {
                 alphabet[i]?.let { transLastName += it }
             } else if (!alphabet[i.toLowerCase()].isNullOrBlank()){
                 alphabet[i.toLowerCase()]?.let { transLastName += it.capitalize() }
-            }else if (alphabet[i.toLowerCase()].isNullOrBlank()){
+            }else if (alphabet[i.toLowerCase()] == null){
                 transLastName += i
             }
         }

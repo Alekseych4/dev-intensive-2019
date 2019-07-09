@@ -26,7 +26,10 @@ fun Date.add(value:Int, units: TimeUnits = TimeUnits.SECOND):Date {
     return this
 }
 fun Date.humanizeDiff(date:Date = Date()): String {
-    return "10:00"
+    if(this.time == date.time){
+        return "True ${this.time}"
+    }
+    return "${this.time} Current time: ${date.time}"
 }
 
 enum class TimeUnits{
